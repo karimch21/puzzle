@@ -3,9 +3,7 @@ html {
 }
 
 body {
-    overflow-x: hidden;
     position: relative;
-    height: 100%;
 }
 
 *,
@@ -45,7 +43,24 @@ button {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
 .container {
     padding: 0 10px;
-    width: 1181px;
+    max-width: 1181px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 16px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
 }

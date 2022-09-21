@@ -1,0 +1,67 @@
+.header {
+    padding: 14px 0;
+    background: #000000;
+    backdrop-filter: blur(2px);
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.header-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.logo-title {
+    margin-right: 63px;
+    width: 82px;
+    height: 52px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    position: relative;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.0145px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.logo-title::after {
+    content: "";
+    background-image: url(../../assets/incons/bamboo.svg);
+    width: 13.03px;
+    height: 20.98px;
+    transform: rotate(-3deg);
+    position: absolute;
+    bottom: 9px;
+    left: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu li+li {
+    margin-left: 58px;
+}
+
+.menu a {
+    color: #FFFFFF;
+}
+
+.rights {
+    margin-left: auto;
+}
+
+.menu__link--active {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

@@ -1,0 +1,136 @@
+.promo {
+    margin-bottom: 12px;
+    padding-top: 86px;
+    padding-bottom: 100px;
+    background-image: url(../../../assets/images/promo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.promo::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #283035;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.promo__wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.promo__box {
+    max-width: 572px;
+    width: 100%;
+}
+
+.promo__title {
+    margin-bottom: 60px;
+    max-width: 500.31px;
+    width: 100%;
+    position: relative;
+    font-weight: 700;
+    font-size: 106.496px;
+    line-height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 2;
+}
+
+.promo__title span {
+    color: #FFEE2E;
+}
+
+.promo__title::before {
+    content: "";
+    max-width: 465px;
+    width: 100%;
+    padding: 92.95% 0 0 0;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: -73px;
+}
+
+.promo__btn {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    display: block;
+    max-width: 298px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.backstage {
+    padding-top: 140px;
+    padding-bottom: 180px;
+    background-image: url(../../../assets/images/flower_backstage.png);
+    background-repeat: no-repeat;
+    background-size: 200px 605px;
+    background-position: 100% center;
+}
+
+.backstage__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.backstage__img {
+    max-width: 609px;
+    width: 100%;
+    overflow: hidden;
+    min-width: 455px;
+    min-height: 408px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.backstage__img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.backstage__content {
+    max-width: 465px;
+    word-wrap: 100%;
+    color: #333B41;
+}
+
+.backstage__title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.backstage__text {
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.backstage__subtitle {
+    margin-bottom: 34px;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.backstage__work {
+    font-size: 16px;
+    line-height: 22px;
+}
