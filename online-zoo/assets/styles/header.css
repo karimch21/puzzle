@@ -27,6 +27,7 @@
     font-size: 19.0145px;
     line-height: 23px;
     text-align: center;
+    cursor: pointer;
 }
 
 .logo-title::after {
@@ -55,12 +56,33 @@
     color: #FFFFFF;
 }
 
+.menu li:hover a {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .rights {
     margin-left: auto;
 }
 
+.rights:hover a {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .menu__link--active {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.menu li:hover .menu__link--active {
+    background: #FFFFFF;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
