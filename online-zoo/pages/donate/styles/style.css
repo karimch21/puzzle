@@ -63,13 +63,16 @@
     border-radius: 20px;
     font-weight: 400;
 }
-
+.container.feed__wrap {
+    max-width: 1161px;
+}
 .feed__title {
     margin-bottom: 20px;
     font-size: 48px;
     line-height: 58px;
     text-align: center;
     color: #FE9013;
+    font-weight: 400;
 }
 
 .feed__text {
@@ -77,7 +80,6 @@
     font-size: 24px;
     line-height: 29px;
     color: #333B41;
-    text-align: center;
 }
 
 .feed__diet {
@@ -90,6 +92,7 @@
 }
 
 .feed__diet-content {
+    padding-top: 50px;
     margin-right: 89px;
     max-width: 160px;
     width: 100%;
@@ -106,8 +109,8 @@
     background-size: contain;
     background-position: center;
     position: absolute;
-    right: -11px;
-    top: 50%;
+    right: -22px;
+    top: 60%;
     transform: translateY(-50%);
 }
 
@@ -237,6 +240,7 @@
     background-size: 10px 20px;
     position: absolute;
     left: -30px;
+    bottom: -9px;
     transition: all 0.5s;
 }
 
@@ -261,7 +265,7 @@
     content: "";
     position: absolute;
     left: 15px;
-    top: -35px;
+    top: -45px;
     width: 40px;
     height: 40px;
     background-image: url(../../../assets/incons/roller.svg);
@@ -361,13 +365,12 @@
 }
 
 .feed__period {
-    max-width: 195px;
+    max-width: 222px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -375,6 +378,7 @@
 }
 
 .feed__period label {
+    margin-right: 56px;
     padding-left: 26px;
     position: relative;
     cursor: pointer;
@@ -417,6 +421,7 @@
     margin-bottom: 30.02px;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 25px;
+    font-size: 15px;
 }
 
 .feed__form-share {

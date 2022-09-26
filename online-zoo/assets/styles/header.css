@@ -13,6 +13,7 @@
 }
 
 .logo-title {
+    padding-top: 1.5px;
     margin-right: 63px;
     width: 82px;
     height: 52px;
@@ -37,8 +38,8 @@
     height: 20.98px;
     transform: rotate(-3deg);
     position: absolute;
-    bottom: 9px;
-    left: 10px;
+    bottom: 7px;
+    left: 8px;
     background-repeat: no-repeat;
     background-size: contain;
 }
