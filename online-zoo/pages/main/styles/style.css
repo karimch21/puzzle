@@ -329,12 +329,13 @@
 }
 
 .feed__wrap {
-    padding: 41px 58px 59px 99px;
+    padding: 41px 58px 59px 95px;
     background: rgba(253, 253, 255, 0.52);
     border-radius: 20px;
 }
 
 .feed__title {
+    max-width: 963px;
     margin-bottom: 30px;
     font-weight: 400;
     font-size: 48px;
@@ -390,6 +391,7 @@
 }
 
 .feed__shema-title {
+    max-width: 958px;
     margin-bottom: 40px;
     font-size: 36px;
     line-height: 47px;
@@ -397,19 +399,22 @@
 }
 
 .feed__shema {
-    max-width: 763px;
+    max-width: 809px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 60px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+
 }
 
 .feed__item {
     max-width: 168px;
     width: 100%;
     position: relative;
+}
+.feed__item + .feed__item {
+    margin-left: 130px;
 }
 
 .feed__item:not(:last-of-type)::after {
@@ -445,7 +450,7 @@
     display: block;
     max-width: 298px;
     width: 100%;
-    margin: 0 auto;
+    margin-left: 33%;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     border-radius: 25px
 }
@@ -481,7 +486,7 @@
     margin-bottom: 32px;
     display: flex;
     align-items: center;
-    max-width: 1159px;
+    max-width: 1162px;
     width: 100%;
     overflow-x: auto;
     position: relative;
@@ -502,7 +507,7 @@
     background: #F1F3F2;
     border-radius: 20px;
     border: 2px solid transparent;
-    background: linear-gradient(#F1F3F2, #F1F3F2) padding-box, linear-gradient(rgba(243, 169, 248, 0.66) 22.51%, rgba(254, 189, 171, 0.74) 6.48%, #E0D8F0 104.57%, #EAF7FE 125.33%, #EAF7FE 0) border-box;
+    background: linear-gradient(#F1F3F2, #F1F3F2) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -589,9 +594,11 @@
     max-width: 599px;
     width: 100%;
     height: 8px;
-    background: #F5F7F6;
+    border: 1px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
 .testimonials-scrollbar__thumb {

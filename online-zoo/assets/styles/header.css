@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.logo-title {
+.logo-title a{
     padding-top: 1.5px;
     margin-right: 63px;
     width: 82px;
@@ -22,16 +22,15 @@
     border: 1px solid #FFFFFF;
     border-radius: 2px;
     position: relative;
-    font-family: 'Roboto';
+    cursor: pointer;
+    display: inline-block;
     font-style: normal;
     font-weight: 400;
     font-size: 19.0145px;
     line-height: 23px;
     text-align: center;
-    cursor: pointer;
 }
-
-.logo-title::after {
+.logo-title a::after {
     content: "";
     background-image: url(../../assets/incons/bamboo.svg);
     width: 13.03px;
@@ -43,7 +42,6 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .menu ul {
     display: flex;
     align-items: center;
