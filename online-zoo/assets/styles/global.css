@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -87,3 +88,15 @@ img {
 .btn:active {
     background-image: linear-gradient(113.96deg, #4B9200, #4B9200);
 }
+
+
+/*----- @media -----*/
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+
+/*----- @media -----*/

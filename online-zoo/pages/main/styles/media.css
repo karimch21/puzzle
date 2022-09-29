@@ -1,0 +1,25 @@
+@media (max-width: 1000px) {
+    .promo {
+        padding-top: 45px;
+        padding-bottom: 47px;
+    }
+    .promo__title {
+        margin-bottom: 37px;
+        font-weight: 700;
+        font-size: 85px;
+        line-height: 64px;
+    }
+    .promo__box {
+        max-width: 508px;
+    }
+    .promo__title::before {
+        max-width: 367px;
+        height: 367px;
+        padding: 0;
+        bottom: 9px;
+        left: -7px;
+    }
+    .promo__btn {
+        margin-right: 104px;
+    }
+}

@@ -82,6 +82,7 @@
     color: #333B41;
     transition: all 0.5s;
 }
+
 .submit-btn:hover {
     border: 1px solid #4B9200;
     background: #F1F3F2;
@@ -161,3 +162,9 @@
 .footer__copy p:first-child {
     margin-bottom: 10px;
 }
+
+
+/*----- @media -----*/
+
+
+/*----- @media -----*/

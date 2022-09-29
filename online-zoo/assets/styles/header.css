@@ -5,6 +5,8 @@
     font-weight: 500;
     font-size: 16px;
     color: #FFFFFF;
+    position: relative;
+    z-index: 5;
 }
 
 .header-wrap {
@@ -12,7 +14,7 @@
     align-items: center;
 }
 
-.logo-title a{
+.logo-title a {
     padding-top: 1.5px;
     margin-right: 63px;
     width: 82px;
@@ -30,6 +32,7 @@
     line-height: 23px;
     text-align: center;
 }
+
 .logo-title a::after {
     content: "";
     background-image: url(../../assets/incons/bamboo.svg);
@@ -42,6 +45,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .menu ul {
     display: flex;
     align-items: center;
@@ -86,3 +90,18 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+
+/*----- @media -----*/
+
+@media (max-width: 1000px) {
+    .header {
+        background-color: #111115;
+    }
+    .menu li+li {
+        margin-left: 48px;
+    }
+}
+
+
+/*----- @media -----*/
