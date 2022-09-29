@@ -166,5 +166,42 @@
 
 /*----- @media -----*/
 
+@media (max-width: 1200px) {
+    .footer__contact {
+        justify-content: space-between;
+    }
+    .social {
+        margin-right: 3.3%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .social {
+        margin-right: 17.3%;
+    }
+    .footer__form-title {
+        margin-bottom: 17px;
+    }
+    .form__email {
+        padding: 12px;
+    }
+    .form__email::placeholder,
+    .form__email {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .footer__form-box {
+        max-width: 400px;
+    }
+    .footer__menu {
+        margin-right: 8.73%;
+    }
+    .footer__copy {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+}
+
 
 /*----- @media -----*/
