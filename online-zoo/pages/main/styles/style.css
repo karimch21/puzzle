@@ -151,16 +151,16 @@
 }
 
 .pets__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-auto-columns: 31.6%;
+    grid-template-rows: repeat(2, auto);
+    column-gap: 30px;
+    row-gap: 20px;
+    grid-auto-flow: column;
+    overflow-x: hidden;
 }
 
 .pets__item {
-    margin-bottom: 20px;
-    width: 31.53%;
-    min-width: 285.24px;
     border: 1px solid #FB772A;
     border-radius: 5px;
     overflow: hidden;
@@ -405,7 +405,6 @@
     margin-bottom: 60px;
     display: flex;
     align-items: flex-start;
-
 }
 
 .feed__item {
@@ -413,7 +412,8 @@
     width: 100%;
     position: relative;
 }
-.feed__item + .feed__item {
+
+.feed__item+.feed__item {
     margin-left: 130px;
 }
 
@@ -598,7 +598,6 @@
     background: linear-gradient(#fff, #fff) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
     border-radius: 5px;
     cursor: pointer;
-
 }
 
 .testimonials-scrollbar__thumb {
