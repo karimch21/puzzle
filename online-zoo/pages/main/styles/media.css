@@ -16,6 +16,9 @@
         padding: 0;
         max-width: 338px;
     }
+    .testimonials__card {
+        max-width: 293px;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -95,6 +98,7 @@
     .feed {
         padding-top: 30px;
         padding-bottom: 50px;
+        margin-bottom: 100px;
     }
     .feed__wrap {
         padding: 30px 48px 50px 49px;
@@ -108,8 +112,12 @@
     .feed__text {
         font-size: 14px;
     }
+    .feed__text--two {
+        letter-spacing: 0.4px;
+    }
     .feed__text--one {
-        padding-right: 33px;
+        padding-right: 54px;
+        letter-spacing: 0.37px;
     }
     .feed__information {
         margin-bottom: 39px;
@@ -119,6 +127,35 @@
         max-width: 764px;
     }
     .feed__btn {
-        margin-left: 32%;
+        margin-left: 32.4%;
+    }
+    .testimonials__title {
+        margin-bottom: 29px;
+    }
+    .testimonials__card {
+        padding: 13px 23px 18px 13px;
+    }
+    .testimonials__stories {
+        max-height: 289px;
+    }
+    .testimonials {
+        padding-bottom: 138px;
+        background-position: right bottom -82px;
+        background-size: 199.98px 317.62px;
+    }
+    .testimonials__cards {
+        margin-bottom: 20px;
+    }
+    .testimonials-scrollbar {
+        margin-left: 28.5%;
+        margin-bottom: 53px;
+        max-width: 390px;
+        background: linear-gradient(#F5F7F6, #F5F7F6) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+    }
+    .testimonials-scrollbar__thumb {
+        width: 73.19px;
+    }
+    .testimonials__btn {
+        font-size: 15px;
     }
 }
