@@ -92,4 +92,33 @@
     .pets__item:nth-child(7) {
         order: 4;
     }
+    .feed {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    .feed__wrap {
+        padding: 30px 48px 50px 49px;
+    }
+    .feed__title {
+        margin-bottom: 24px;
+    }
+    .feed__subtitle {
+        margin-bottom: 18px;
+    }
+    .feed__text {
+        font-size: 14px;
+    }
+    .feed__text--one {
+        padding-right: 33px;
+    }
+    .feed__information {
+        margin-bottom: 39px;
+    }
+    .feed__shema {
+        margin-bottom: 73px;
+        max-width: 764px;
+    }
+    .feed__btn {
+        margin-left: 32%;
+    }
 }
