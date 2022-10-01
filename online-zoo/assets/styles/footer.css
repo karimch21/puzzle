@@ -228,5 +228,23 @@
     }
 }
 
+@media (max-width: 640px) {
+    .footer {
+        padding-top: 12px;
+    }
+    .social__item:not(:last-of-type) {
+        margin-bottom: 21px;
+    }
+    .footer__search {
+        margin-bottom: 34px;
+    }
+    .footer__btn {
+        margin-bottom: 67px;
+    }
+    .footer .menu li+li {
+        margin-left: 37px;
+    }
+}
+
 
 /*----- @media -----*/
