@@ -145,7 +145,7 @@
         padding: 2px 0;
         font-size: 0;
     }
-    .logo-title a {
+    .header .logo-title a {
         width: 47px;
         height: 30px;
         font-weight: 400;
@@ -156,7 +156,7 @@
         border: none;
         border-radius: 0;
     }
-    .logo-title a::after {
+    .header .logo-title a::after {
         width: 7.03px;
         height: 16.98px;
         bottom: 2px;

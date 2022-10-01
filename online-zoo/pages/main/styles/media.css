@@ -225,6 +225,29 @@
         .feed__btn {
             margin: 0 auto;
         }
+        .testimonials__cards {
+            margin-bottom: 37px;
+            display: block;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            max-height: 360px;
+        }
+        .testimonials-scrollbar {
+            display: none;
+        }
+        .testimonials__card {
+            max-width: 100%;
+            max-height: 109px;
+        }
+        .testimonials__card+.testimonials__card {
+            margin: 0;
+            margin-top: 15px;
+        }
+        .testimonials__btn {
+            margin: 0 auto;
+            display: block;
+            max-width: 240px;
+        }
     }
     
     @media (max-width: 640px) {
@@ -371,5 +394,20 @@
         }
         .feed__btn {
             padding-left: 15px;
+        }
+        .testimonials__card {
+            padding: 15px 23px 18px 9px;
+        }
+        .testimonials__contact {
+            margin-bottom: 8px;
+        }
+        .testimonials__stories {
+            max-height: 38px;
+            padding-left: 8px;
+        }
+        .testimonials {
+            padding-bottom: 80px;
+            background-position: right -5px bottom -70px;
+            background-size: 119.98px 202.62px;
         }
     }
