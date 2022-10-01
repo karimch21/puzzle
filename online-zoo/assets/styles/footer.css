@@ -203,5 +203,30 @@
     }
 }
 
+@media (max-width: 850px) {
+    .footer__form-box {
+        display: none;
+    }
+    .footer__box {
+        position: relative;
+    }
+    .footer .social {
+        margin-right: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 26px;
+    }
+    .footer .social__link-name {
+        display: none;
+    }
+    .footer .social__link-icon {
+        margin-right: 0;
+    }
+    .footer__menu {
+        margin-right: 0;
+    }
+}
+
 
 /*----- @media -----*/

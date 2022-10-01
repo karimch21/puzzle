@@ -89,6 +89,38 @@ img {
     background-image: linear-gradient(113.96deg, #4B9200, #4B9200);
 }
 
+.burger {
+    width: 18px;
+    height: 10px;
+    position: relative;
+    align-items: center;
+    display: none;
+}
+
+.burger div,
+.burger::after,
+.burger::before {
+    content: "";
+    background: #FFFFFF;
+    border-radius: 2px;
+    height: 2px;
+    width: 100%;
+}
+
+.burger::after,
+.burger::before {
+    position: absolute;
+    left: 0;
+}
+
+.burger::after {
+    top: 0;
+}
+
+.burger::before {
+    bottom: 0;
+}
+
 
 /*----- @media -----*/
 
@@ -96,6 +128,13 @@ img {
     .container {
         max-width: 1000px;
         padding: 0 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        max-width: 640px;
+        padding: 0 20px;
     }
 }
 
