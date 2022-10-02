@@ -438,6 +438,28 @@
         }
     }
     
+    @media (max-width: 570px) {
+        .pets__items {
+            grid-auto-columns: max-content;
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(4, auto);
+            column-gap: 0;
+        }
+        .pets__btns {
+            display: none;
+        }
+        .pets {
+            background-size: 114px 106px, 123px 98px;
+            background-position: left -21px bottom 0px, right bottom;
+        }
+        .backstage {
+            padding-bottom: 40px;
+        }
+        .pets__item:nth-child(3) {
+            order: 4;
+        }
+    }
+    
     @media (max-width: 420px) {
         .backstage {
             background-position: 118% center;
@@ -502,5 +524,19 @@
         }
         .backstage__work {
             width: 99%;
+        }
+        .pets__items {
+            row-gap: 18px;
+        }
+        .pets__content {
+            padding-left: 8px;
+        }
+        .pets__box {
+            margin-bottom: 21px;
+        }
+        .pets {
+            padding-bottom: 60px;
+            background-size: 65px 81px, 74px 62px;
+            background-position: left -10px bottom -6px, right -11px bottom;
         }
     }
