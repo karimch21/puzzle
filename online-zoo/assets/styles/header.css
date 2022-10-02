@@ -164,5 +164,11 @@
     }
 }
 
+@media (max-width: 320px) {
+    .header-wrap {
+        max-width: 321px;
+    }
+}
+
 
 /*----- @media -----*/

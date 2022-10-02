@@ -411,3 +411,96 @@
             background-size: 119.98px 202.62px;
         }
     }
+    /* ------------------ */
+    
+    @media (max-width: 638px) {
+        .promo__btn {
+            margin: 0 auto;
+            margin-top: 35px;
+            max-width: 100%;
+        }
+        .backstage__title {
+            font-size: 32px;
+            line-height: 33px;
+        }
+        .backstage__text {
+            margin-bottom: 15px;
+        }
+        .backstage__subtitle {
+            margin-bottom: 15px;
+        }
+        .backstage {
+            background-size: 95px 299px;
+            background-position: 107% center;
+        }
+        .backstage__wrap {
+            padding-right: 73px;
+        }
+    }
+    
+    @media (max-width: 420px) {
+        .backstage {
+            background-position: 118% center;
+        }
+        .backstage__wrap {
+            padding-right: 57px;
+        }
+        .backstage__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .backstage__subtitle {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+    }
+    
+    @media (max-width: 320px) {
+        .promo {
+            margin-bottom: 20px;
+            padding-top: 40px;
+            padding-bottom: 48px;
+        }
+        .promo__wrap {
+            max-width: 321px;
+        }
+        .promo__title::before {
+            max-width: 119.09px;
+            height: 119.09px;
+        }
+        .promo__title {
+            max-width: 128.64px;
+            font-size: 28px;
+            line-height: 21px;
+        }
+        .promo__title::before {
+            left: -21px;
+        }
+        .promo__btn {
+            max-width: 93%;
+            position: absolute;
+            bottom: -75px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .backstage {
+            background-position: 119% 4.5%;
+            background-size: 79px 224px;
+        }
+        .backstage__wrap {
+            padding-right: 25px;
+            max-width: 321px;
+            padding: 0 8px;
+        }
+        .backstage__title {
+            margin-bottom: 11px;
+            padding-top: 26px;
+            line-height: 29px;
+        }
+        .backstage__text {
+            margin-bottom: 21px;
+        }
+        .backstage__work {
+            width: 99%;
+        }
+    }

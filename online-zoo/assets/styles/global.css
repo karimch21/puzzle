@@ -138,5 +138,12 @@ img {
     }
 }
 
+@media (max-width: 320px) {
+    .container {
+        max-width: 300px;
+        padding: 0 10px;
+    }
+}
+
 
 /*----- @media -----*/
