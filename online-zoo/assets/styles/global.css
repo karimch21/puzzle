@@ -143,6 +143,10 @@ img {
         max-width: 300px;
         padding: 0 10px;
     }
+    .testimonials .container {
+        max-width: 321px;
+        padding: 0 10px;
+    }
 }
 
 
