@@ -63,9 +63,11 @@
     border-radius: 20px;
     font-weight: 400;
 }
+
 .container.feed__wrap {
     max-width: 1161px;
 }
+
 .feed__title {
     margin-bottom: 20px;
     font-size: 48px;
@@ -185,48 +187,25 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
-.feed__range label {
-    position: absolute;
-    bottom: -65px;
-    height: 37px;
-    min-width: 42px;
+.feed__num {
+    display: none;
 }
 
-.feed__range label:nth-child(1) {
-    left: 0;
+.feed__range-box {
+    padding-top: 20px;
+    transform: translateY(15px);
+    z-index: 10;
 }
 
-.feed__range label:nth-child(2) {
-    left: 130px;
+.feed__range-box label {
+    position: relative;
 }
 
-.feed__range label:nth-child(3) {
-    left: 260px;
-}
-
-.feed__range label:nth-child(4) {
-    left: 390px;
-}
-
-.feed__range label:nth-child(5) {
-    left: 520px;
-}
-
-.feed__range label:nth-child(6) {
-    left: 650px;
-}
-
-.feed__range label:nth-child(7) {
-    left: 780px;
-}
-
-.feed__range label:nth-child(8) {
-    right: -32px;
-}
-
-.feed__range label span {
+.feed__range-box span {
     display: inline-block;
     padding-left: 12px;
     font-weight: 500;
@@ -238,34 +217,30 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 10px 20px;
-    position: absolute;
-    left: -30px;
-    bottom: -9px;
     transition: all 0.5s;
+    position: absolute;
+    left: -31px;
+    top: 0;
 }
 
-.feed__num {
-    display: none;
-}
-
-.feed__range label::after {
+.feed__range-box label::after {
     content: "";
     width: 10px;
     height: 10px;
     background: #FFEE2E;
     border-radius: 100%;
     position: absolute;
-    left: 0;
-    top: -20px;
+    left: -6px;
+    top: -26px;
     cursor: pointer;
     z-index: 1;
 }
 
-.feed__num:checked+span::after {
+.feed__num:checked+label::before {
     content: "";
     position: absolute;
-    left: 15px;
-    top: -45px;
+    left: -21px;
+    top: -41px;
     width: 40px;
     height: 40px;
     background-image: url(../../../assets/incons/roller.svg);
@@ -274,24 +249,24 @@
     background-size: 40px 40px;
 }
 
-.feed__num:checked+span {
+.feed__num:checked+label span {
     color: #FE9013;
     background-image: url(../../../assets/incons/dollar.svg);
 }
 
-.feed__range label:hover span::after {
+.feed__range-box:hover label::before {
     animation: rollerAnimat 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
-.feed__range label:hover::after {
+.feed__range-box:hover label::after {
     animation: rollerAnimat 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 
-.feed__range label:hover span {
+.feed__range-box:hover span {
     color: #d67608;
     background-image: url(../../../assets/incons/dollar.svg);
     transition: all 0.5s;
