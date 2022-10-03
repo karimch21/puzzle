@@ -50,6 +50,10 @@
     line-height: 22px;
 }
 
+.informational__text span {
+    font-weight: 400;
+}
+
 .informational__post {
     font-weight: 400;
     font-size: 36px;
@@ -69,6 +73,7 @@
 }
 
 .feed__title {
+    padding-right: 11px;
     margin-bottom: 20px;
     font-size: 48px;
     line-height: 58px;
