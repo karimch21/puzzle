@@ -144,7 +144,8 @@ img {
         padding: 0 10px;
     }
     .testimonials .container,
-    .footer .container {
+    .footer .container,
+    .donate-page .container {
         max-width: 321px;
         padding: 0 10px;
     }
