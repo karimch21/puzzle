@@ -142,9 +142,16 @@
 
 @media (max-width: 640px) {
     .header {
+       
+
         padding: 2px 0;
         font-size: 0;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        top: 0;
     }
+    
     .header .logo-title a {
         width: 47px;
         height: 30px;

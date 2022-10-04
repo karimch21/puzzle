@@ -136,6 +136,9 @@ img {
         max-width: 640px;
         padding: 0 20px;
     }
+    main{
+        padding-top: 34px;
+    }
 }
 
 @media (max-width: 320px) {

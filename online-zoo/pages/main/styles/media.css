@@ -110,14 +110,12 @@
             margin-bottom: 18px;
         }
         .feed__text {
-            font-size: 14px;
+            font-size: 16px;
         }
-        .feed__text--two {
-            letter-spacing: 0.4px;
-        }
+       
         .feed__text--one {
-            padding-right: 54px;
-            letter-spacing: 0.37px;
+            padding-right:29px;
+            letter-spacing: 0px;
         }
         .feed__information {
             margin-bottom: 39px;

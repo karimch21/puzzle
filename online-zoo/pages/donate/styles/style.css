@@ -163,6 +163,7 @@
 
 .feed__range {
     margin-bottom: 50px;
+    position: relative;
 }
 
 .feed__range-wrap {
@@ -172,16 +173,16 @@
     height: 27px;
     background: #404950;
     border-radius: 2px;
-    position: relative;
+   
 }
 
-.feed__range-wrap::after {
+.feed__range::after {
     content: "";
     max-width: 915px;
     width: 100%;
     height: 2px;
     position: absolute;
-    top: 50%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #72828E;
