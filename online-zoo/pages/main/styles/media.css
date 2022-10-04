@@ -3,45 +3,64 @@
             padding-top: 100px;
             background-image: none;
         }
+
         .pets {
             background-image: url(../../../assets/images/petsLeftBgMini.png), url(../../../assets/images/petsRightBgMini.png);
         }
+
         .pets__items {
             row-gap: 92px;
         }
+
         .pets__item {
             margin-bottom: 0px;
         }
+
         .pets__btns {
             padding: 0;
             max-width: 338px;
         }
+
+        
+
+        .testimonials__card+.testimonials__card {
+            margin-left: 2.6%;
+        }
+
+        .testimonials__cards {
+            padding: 0 10px;
+        }
+
         .testimonials__card {
-            max-width: 293px;
+            max-width: 100%;
+            width: 23.1%;
         }
     }
-    
+
     @media (max-width: 1100px) {
         .pets__items {
             grid-auto-columns: 31.3%;
         }
     }
-    
+
     @media (max-width: 1000px) {
         .promo {
             padding-top: 45px;
             padding-bottom: 47px;
             margin-bottom: 0;
         }
+
         .promo__title {
             margin-bottom: 37px;
             font-weight: 700;
             font-size: 85px;
             line-height: 64px;
         }
+
         .promo__box {
             max-width: 508px;
         }
+
         .promo__title::before {
             max-width: 367px;
             height: 367px;
@@ -49,115 +68,158 @@
             bottom: 9px;
             left: -7px;
         }
+
         .promo__btn {
             margin-right: 104px;
         }
+
         .backstage {
             padding-bottom: 142px;
         }
+
         .backstage__img {
             margin-right: 31px;
             max-width: 455px;
             min-width: 455px;
         }
+
         .pets {
             padding-bottom: 138px;
         }
+
         .pets__box {
             margin-bottom: 84px;
         }
+
         .pets__img {
             padding: 99.9% 0 0 0;
             max-width: 100%;
             height: 294px;
         }
+
         .pets__items {
             column-gap: 28px;
         }
+
         .pets__item:nth-child(1) {
             order: 1;
         }
+
         .pets__item:nth-child(2) {
             order: 4;
         }
+
         .pets__item:nth-child(3) {
             order: 3;
         }
+
         .pets__item:nth-child(4) {
             order: 8;
         }
+
         .pets__item:nth-child(5) {
             order: 5;
         }
+
         .pets__item:nth-child(6) {
             order: 7;
         }
+
         .pets__item:nth-child(7) {
             order: 4;
         }
+
         .feed {
             padding-top: 30px;
             padding-bottom: 50px;
             margin-bottom: 100px;
         }
+
         .feed__wrap {
             padding: 30px 48px 50px 49px;
         }
+
         .feed__title {
             margin-bottom: 24px;
         }
+
         .feed__subtitle {
             margin-bottom: 18px;
         }
+
         .feed__text {
             font-size: 16px;
         }
-       
+
         .feed__text--one {
-            padding-right:29px;
+            padding-right: 29px;
             letter-spacing: 0px;
         }
+
         .feed__information {
             margin-bottom: 39px;
         }
+
         .feed__shema {
             margin-bottom: 73px;
             max-width: 764px;
         }
+
         .feed__btn {
             margin-left: 32.4%;
         }
+
         .testimonials__title {
             margin-bottom: 29px;
         }
+
         .testimonials__card {
             padding: 13px 23px 18px 13px;
         }
+
         .testimonials__stories {
             max-height: 289px;
         }
+
         .testimonials {
             padding-bottom: 138px;
             background-position: right bottom -82px;
             background-size: 199.98px 317.62px;
         }
+
         .testimonials__cards {
             margin-bottom: 20px;
         }
+
         .testimonials-scrollbar {
             margin-left: 28.5%;
             margin-bottom: 53px;
             max-width: 390px;
             background: linear-gradient(#F5F7F6, #F5F7F6) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
         }
+
         .testimonials-scrollbar__thumb {
             width: 73.19px;
         }
+
         .testimonials__btn {
             font-size: 15px;
         }
+
+        .testimonials__card+.testimonials__card {
+            margin-left: 3.25%;
+        }
+
+        .testimonials__cards {
+            padding: 0;
+        }
+
+        .testimonials__card {
+            max-width: 100%;
+            width: 31.18%;
+        }
     }
-    
+
     @media (max-width: 999px) {
         .pets__items {
             grid-auto-columns: auto;
@@ -165,64 +227,74 @@
             align-items: start;
         }
     }
-    
+
     @media (max-width: 950px) {
         .backstage__img {
             margin-right: 15px;
             min-width: 400px;
         }
+
         .feed {
             padding-top: 20px;
             padding-bottom: 20px;
             margin-bottom: 60px;
         }
+
         .feed .container {
             padding: 0px 0px;
         }
+
         .feed__item:not(:last-of-type)::after {
             top: -30px;
             background-image: url(../../../assets/incons/feed-arrowSlim.svg);
             right: -53%;
         }
+
         .feed__item+.feed__item {
             margin-left: 0;
         }
+
         .feed__shema {
             justify-content: space-between;
         }
     }
-    
+
     @media (max-width: 900px) {
         .backstage__img {
             display: none;
             margin: 0;
         }
+
         .backstage {
             background-image: url(../../../assets/images/flower_backstage.png);
             background-size: 140px 447px;
             background-position: 100% center;
         }
     }
-    
+
     @media (max-width: 800px) {
         .pets__items {
             row-gap: 72px;
         }
     }
-    
+
     @media (max-width: 730px) {
         .pets__items {
             row-gap: 42px;
         }
+
         .pets__btns {
             top: 49%;
         }
+
         .feed__item:not(:last-of-type)::after {
             right: -66px;
         }
+
         .feed__btn {
             margin: 0 auto;
         }
+
         .testimonials__cards {
             margin-bottom: 37px;
             display: block;
@@ -230,38 +302,57 @@
             overflow-y: hidden;
             max-height: 360px;
         }
+
         .testimonials-scrollbar {
             display: none;
         }
+
         .testimonials__card {
             max-width: 100%;
             max-height: 109px;
         }
+
         .testimonials__card+.testimonials__card {
             margin: 0;
             margin-top: 15px;
         }
+
         .testimonials__btn {
             margin: 0 auto;
             display: block;
             max-width: 240px;
         }
+        .testimonials__card+.testimonials__card {
+            margin-left: 0;
+        }
+
+        .testimonials__cards {
+            padding: 0;
+        }
+
+        .testimonials__card {
+            max-width: 100%;
+            width: 100%;
+        }
     }
-    
+
     @media (max-width: 640px) {
         .promo {
             padding-top: 47px;
             padding-bottom: 40px;
         }
+
         .promo__title::before {
             max-width: 237.6px;
             height: 237.6px;
         }
+
         .promo__box {
             max-width: 100%;
             display: flex;
             flex-direction: column;
         }
+
         .promo__title {
             margin-left: auto;
             max-width: 248.64px;
@@ -273,15 +364,18 @@
             color: #FFFFFF;
             margin-bottom: -7px;
         }
+
         .promo__btn {
             padding-left: 14px;
             margin: 0;
             margin-right: auto;
         }
+
         .promo__title::before {
             bottom: 3px;
             left: -40px;
         }
+
         .backstage {
             padding-left: 3px;
             padding-top: 58px;
@@ -289,30 +383,37 @@
             background-position: 105% top;
             padding-bottom: 78px;
         }
+
         .backstage__content {
             max-width: 485px;
         }
+
         .backstage__text {
             margin-bottom: 33px;
         }
+
         .backstage__subtitle {
             margin-bottom: 20px;
         }
+
         .pets {
             padding-bottom: 101px;
             background-size: 198px 200px, 176px 131px;
             background-position: left -61px bottom 0px, right bottom;
         }
+
         .pets__img {
             padding: 0;
             height: 285px;
         }
+
         .pets__title {
             font-style: normal;
             font-size: 12.4695px;
             line-height: 17px;
             color: #000000;
         }
+
         .pets__content p {
             font-style: normal;
             font-weight: 300;
@@ -320,154 +421,190 @@
             line-height: 14px;
             color: #000000;
         }
+
         .pets__banana {
             padding: 8px 45px 13px 12px;
             background-position: 97% 10px;
             background-size: 25.72px 28.84px;
         }
+
         .pets__fish {
             background-size: 37.41px 29.62px;
             background-position: 98% 7px;
         }
+
         .pets__content {
             padding-bottom: 5px;
             min-height: 46px;
             padding-left: 11px;
             padding-top: 6px;
         }
+
         .pets__items {
             row-gap: 33px
         }
+
         .pets__btns {
             top: 48%;
             max-width: 194px;
         }
+
         .pets__box {
             margin-bottom: 34px;
         }
+
         .feed__title {
             font-weight: 400;
             font-size: 42px;
             line-height: 50px;
         }
+
         .feed__wrap {
             padding: 10px 20px 60px 20px;
         }
+
         .feed__title {
             margin-bottom: 20px;
         }
+
         .feed__subtitle {
             font-size: 22px;
             line-height: 26px;
             margin-bottom: 20px;
         }
+
         .feed__text--one {
             padding-right: 0;
             letter-spacing: 0.45px;
             font-size: 15px;
         }
+
         .feed__text--two {
             font-size: 16px;
             line-height: 21px;
             letter-spacing: 0;
         }
+
         .feed__information {
             margin-bottom: 29px;
         }
+
         .feed__shema-title {
             margin-bottom: 21px;
         }
+
         .feed__shema {
             justify-content: flex-start;
             margin-bottom: 43px;
         }
+
         .feed__item+.feed__item {
             margin-left: 41px;
         }
+
         .feed__item:not(:last-of-type)::after {
             right: -58px;
             top: -20px;
             width: 88px;
             z-index: 5;
         }
+
         .feed__btn {
             padding-left: 15px;
         }
+
         .testimonials__card {
             padding: 15px 23px 18px 9px;
         }
+
         .testimonials__contact {
             margin-bottom: 8px;
         }
+
         .testimonials__stories {
             max-height: 38px;
             padding-left: 8px;
         }
+
         .testimonials {
             padding-bottom: 80px;
             background-position: right -5px bottom -70px;
             background-size: 119.98px 202.62px;
         }
     }
+
     /* ------------------ */
-    
+
     @media (max-width: 638px) {
         .promo__btn {
             margin: 0 auto;
             margin-top: 35px;
             max-width: 100%;
         }
+
         .backstage__title,
         .testimonials__title {
             font-size: 32px;
             line-height: 33px;
         }
+
         .backstage__text {
             margin-bottom: 15px;
         }
+
         .backstage__subtitle {
             margin-bottom: 15px;
         }
+
         .backstage {
             background-size: 95px 299px;
             background-position: 107% center;
         }
+
         .backstage__wrap {
             padding-right: 73px;
         }
+
         .feed__shema {
             flex-direction: column;
             align-items: center;
         }
+
         .feed__item:not(:last-of-type)::after {
             top: 82%;
             transform: rotate(80deg);
         }
+
         .feed__item+.feed__item {
             margin-left: 0;
             margin-top: 20px;
         }
+
         .feed__item-img {
             margin-bottom: 15px;
         }
+
         .feed__title {
             font-size: 32px;
             margin-bottom: 15px;
         }
+
         .feed__subtitle {
             font-weight: 400;
             font-size: 18px;
             line-height: 22px;
         }
+
         .feed__text {
             font-size: 14px;
             line-height: 18px;
         }
+
         .feed__shema-title {
             font-size: 28px;
         }
     }
-    
+
     @media (max-width: 570px) {
         .pets__items {
             grid-auto-columns: max-content;
@@ -475,62 +612,75 @@
             grid-template-rows: repeat(4, auto);
             column-gap: 0;
         }
+
         .pets__btns {
             display: none;
         }
+
         .pets {
             background-size: 114px 106px, 123px 98px;
             background-position: left -21px bottom 0px, right bottom;
         }
+
         .backstage {
             padding-bottom: 40px;
         }
+
         .pets__item:nth-child(3) {
             order: 4;
         }
     }
-    
+
     @media (max-width: 420px) {
         .backstage {
             background-position: 118% center;
         }
+
         .backstage__wrap {
             padding-right: 57px;
         }
+
         .backstage__title {
             margin-bottom: 10px;
         }
+
         .backstage__subtitle {
             margin-bottom: 10px;
             font-size: 24px;
         }
+
         .feed__wrap {
             padding-left: 10px;
             padding-right: 10px;
         }
     }
-    
+
     @media (max-width: 320px) {
         .promo {
             margin-bottom: 20px;
             padding-top: 40px;
             padding-bottom: 48px;
         }
+
         .promo__wrap {
             max-width: 321px;
         }
+
         .promo__title::before {
             max-width: 119.09px;
             height: 119.09px;
         }
+
         .promo__title {
             max-width: 128.64px;
             font-size: 28px;
             line-height: 21px;
         }
+
         .promo__title::before {
             left: -21px;
         }
+
         .promo__btn {
             max-width: 93%;
             position: absolute;
@@ -538,50 +688,63 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         .backstage {
             background-position: 119% 4.5%;
             background-size: 79px 224px;
         }
+
         .backstage__wrap {
             padding-right: 25px;
             max-width: 321px;
             padding: 0 8px;
         }
+
         .backstage__title {
             margin-bottom: 11px;
             padding-top: 26px;
             line-height: 29px;
             font-size: 24px;
         }
+
         .backstage__text {
             margin-bottom: 21px;
         }
+
         .backstage__work {
             width: 99%;
         }
+
         .pets__items {
             row-gap: 18px;
         }
+
         .pets__content {
             padding-left: 8px;
         }
+
         .pets__box {
             margin-bottom: 21px;
         }
+
         .pets {
             padding-bottom: 60px;
             background-size: 65px 81px, 74px 62px;
             background-position: left -10px bottom -6px, right -11px bottom;
         }
+
         .feed {
             margin-bottom: 29px;
         }
+
         .feed__wrap {
             padding-bottom: 41px;
         }
+
         .feed__shema {
             margin-bottom: 36px;
         }
+
         .feed__title {
             margin-bottom: 10px;
             padding-top: 10px;
@@ -589,28 +752,35 @@
             font-size: 24px;
             line-height: 29px;
         }
+
         .feed__subtitle {
             font-size: 18px;
             text-align: center;
         }
+
         .feed__text {
             display: none;
         }
+
         .feed__information {
             margin-bottom: 20px;
         }
+
         .feed__shema-title,
         .testimonials__title {
             margin-bottom: 20px;
             font-size: 24px;
             line-height: 29px;
         }
+
         .feed__item-img {
             margin-bottom: 10px;
         }
+
         .feed__item+.feed__item {
             margin-top: 36px;
         }
+
         .feed__item:not(:last-of-type)::after {
             top: 89%;
             right: -60px;
@@ -618,26 +788,33 @@
             width: 88px;
             height: 40.08px;
         }
+
         .feed__item:nth-child(2) {
             margin-top: 38px;
         }
+
         .testimonials {
             background-position: right -12px bottom -63px;
             background-size: 80.98px 133.62px;
         }
+
         .testimonials__card {
             padding: 9px 22px 18px 8px;
         }
+
         .testimonials__contact {
             padding-left: 3px;
             margin-bottom: 10px;
         }
+
         .testimonials__avatar {
             margin-right: 6px;
         }
+
         .testimonials__cards {
             margin-bottom: 26px;
         }
+
         .testimonials {
             padding-bottom: 60px;
         }
