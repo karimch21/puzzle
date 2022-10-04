@@ -142,8 +142,6 @@
 
 @media (max-width: 640px) {
     .header {
-       
-
         padding: 2px 0;
         font-size: 0;
         position: fixed;

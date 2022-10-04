@@ -231,6 +231,7 @@
 @media (max-width: 640px) {
     .footer {
         padding-top: 12px;
+        padding-bottom: 21px;
     }
     .social__item:not(:last-of-type) {
         margin-bottom: 21px;
@@ -299,6 +300,7 @@
 @media (max-width: 320px) {
     .footer {
         padding-top: 20px;
+        padding-bottom: 20px;
     }
     .footer .social {
         top: 53px;
