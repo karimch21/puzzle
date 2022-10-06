@@ -163,7 +163,8 @@
         left: 100%;
         top: 100%;
         transition: left 0.8s;
-        min-height: 329px;
+        height: 329px;
+        overflow-y: auto;
     }
     .menu-wrap--active::after {
         content: '';
