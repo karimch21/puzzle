@@ -36,7 +36,8 @@
     text-align: center;
 }
 
-.logo-title a::after {
+.logo-title a::after,
+.menu-logo span::after {
     content: "";
     background-image: url(../../assets/incons/bamboo.svg);
     width: 13.03px;
@@ -47,6 +48,35 @@
     left: 8px;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.menu-logo {
+    padding: 2.8px 3.8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15.2116px;
+    line-height: 18px;
+    text-align: center;
+    color: #FE9013;
+    border: 0.950725px solid #FE9013;
+    width: 65.6px;
+    height: 41.6px;
+    display: none;
+}
+
+.menu-close {
+    display: none;
+}
+
+.menu-logo span {
+    position: relative;
+}
+
+.menu-logo span::after {
+    background-image: url(../../assets/incons/bambooMain.svg);
+    left: 0.7px;
+    top: 12px;
 }
 
 .menu-wrap {
@@ -119,14 +149,43 @@
         display: flex;
         justify-content: flex-end;
     }
-    .header .menu ul {
-        padding-left: 10px;
-        display: block;
+    .menu-close-wrap {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .menu-box {
+        padding: 10px;
         background-color: #FFFFFF;
         position: absolute;
         width: 100%;
         left: 100%;
-        top: 79px;
+        top: 100%;
+        transition: left 0.8s;
+        min-height: 329px;
+    }
+    .menu-wrap--active::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: #8d6e6e46;
+    }
+    .menu-wrap--active .menu-box {
+        left: 0;
+        transition: left 0.8s;
+    }
+    .menu-logo {
+        display: block;
+    }
+    .menu-close {
+        display: block;
+    }
+    .header .menu ul {
+        display: block;
     }
     .header .menu ul a {
         color: #333B41;
@@ -149,7 +208,6 @@
         width: 100%;
         top: 0;
     }
-    
     .header .logo-title a {
         width: 47px;
         height: 30px;
