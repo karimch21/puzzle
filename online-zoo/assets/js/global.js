@@ -15,14 +15,15 @@ document.body.addEventListener('click', (e) => {
 });
 
 function bodyClickHandler(e) {
-
     closeMenu(e)
 }
 
 function closeMenu(e) {
     if (!e.target.closest('.menu-wrap') && !e.target.closest('.burger')) {
+        if (menu.classList.contains('menu-wrap--active')) {
+            switchClassBackground()
+        }
         menu.classList.remove('menu-wrap--active')
-        switchClassBackground()
     }
 }
 
