@@ -623,16 +623,24 @@
 .testimonials-scrollbar {
     margin: 0 auto;
     margin-bottom: 28px;
-    max-width: 599px;
-    width: 100%;
-    height: 8px;
-    border: 1px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.testimonials-scrollbar__thumb {
+.testimonials-scrollbar input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    outline: 0;
+    max-width: 599px;
+    width: 100%;
+    height: 8px;
+    margin: 0 auto;
+    border: 1px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box, linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%) border-box;
+    border-radius: 5px;
+}
+
+.testimonials-scrollbar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
     width: 115.19px;
     height: 6px;
     background: #FE9013;
@@ -641,8 +649,9 @@
     transition: background 0.5s;
 }
 
-.scrollbar__thumb:hover {
-    background: #aa600c;
+​ input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: white;
+    border: 0.5px solid #e74c3c;
 }
 
 .testimonials__btn {

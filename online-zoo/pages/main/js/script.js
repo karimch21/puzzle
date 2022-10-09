@@ -6,6 +6,7 @@ let visibleWidth = petsItems.getBoundingClientRect().width;
 let translatex = 0;
 
 import dataPetItems from "../../../assets/database/petItems.js";
+
 let dataPetItemsCopy = [...dataPetItems];
 let items = dataPetItems;
 let arrPetsNext = [...items]
@@ -18,15 +19,14 @@ let petItem = document.querySelector('.pets__item');
 let petItemAll = document.querySelectorAll('.pets__item');
 let petItemWidth = petItem.getBoundingClientRect().width;
 
-nextBtn.addEventListener('click', handlerClickNextBtn);
-prevBtn.addEventListener('click', handlerClickPrevBtn);
+nextBtn.addEventListener('click', handlerClickNextBtnPets);
+prevBtn.addEventListener('click', handlerClickPrevBtnPets);
 
 let totalCountItems = Math.floor(visibleWidth / petItemWidth);
 let sumVisibleWidthPetItems = totalCountItems * petItemWidth;
 let gapItem = (visibleWidth - totalCountItems * petItemWidth) / (totalCountItems - 1)
 
-function handlerClickNextBtn() {
-
+function handlerClickNextBtnPets() {
     arrPetsPrev.push(...arrPetsNext.splice(0, 6))
     if (arrPetsNext.length == 0) {
         arrPetsNext = [...arrPetsPrev];
@@ -39,8 +39,7 @@ function handlerClickNextBtn() {
     petsItems.style.transform = `translatex(-${Math.abs(translatex)}px)`
 }
 
-function handlerClickPrevBtn() {
-
+function handlerClickPrevBtnPets() {
     if (arrPetsPrev.length == 0) {
 
         arrPetsPrev = [...arrPetsNext];
@@ -93,13 +92,15 @@ function createPetItem(petsItems) {
 
         petsItem.classList.add('pets__item');
         petsImg.classList.add('pets__img');
-        petsContent.classList.add('pets__content');
+
+        petsContent.classList.add('pets__content', `${item.iconAnimalType}`);
         petsContentBlock.classList.add('pets__content-block');
         petsTitle.classList.add('pets__title');
 
         img.src = item.srcImg
         petsTitle.textContent = item.namePet;
         p.textContent = item.inform;
+
 
         petsItem.appendChild(petsImg)
         petsImg.appendChild(img)
@@ -113,7 +114,7 @@ function createPetItem(petsItems) {
     return items;
 }
 
-function addingPetsItem(petContainer) {
+function addingPetsItem() {
 
     let uniquePetItems = generatePetItems(dataPetItemsCopy, dataPetItems)
     let cardPetItems = createPetItem(uniquePetItems);
