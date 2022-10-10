@@ -520,14 +520,18 @@
     align-items: center;
     max-width: 1162px;
     width: 100%;
-    overflow-x: auto;
     position: relative;
+    transition: transform 0.5s;
 }
 
 .testimonials__cards::-webkit-scrollbar {
     height: 0;
     width: 0;
     overflow: hidden;
+}
+
+.testimonials__cards-wrap {
+    overflow-x: hidden;
 }
 
 .testimonials__card {
