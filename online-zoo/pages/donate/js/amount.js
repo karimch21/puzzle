@@ -35,7 +35,7 @@ function seekRadioInputByValue(feedFormAmount, feedFormRanges) {
 function resizeHandlerWindow(feedFormAmount, feedFormRanges) {
     let windowWidth = document.documentElement.clientWidth;
 
-    if (1600 >= windowWidth) {
+    if (1600 <= windowWidth) {
         feedFormAmount.value = 100;
         seekRadioInputByValue(feedFormAmount, feedFormRanges)
     }

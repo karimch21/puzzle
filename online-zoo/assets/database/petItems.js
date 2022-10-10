@@ -23,12 +23,12 @@ let dataPetItems = [{ "namePet": "Eagles", "inform": "Native to South America", 
         "srcImg": "../../assets/images/pets/item7Alligator.jpg",
         "iconAnimalType": "pets__fish"
     },
-    {
-        "namePet": "Kitoglavy",
-        "inform": "South America, to Central America",
-        "srcImg": "../../assets/images/pets/Kitoglavy.jpg",
-        "iconAnimalType": "pets__fish"
-    },
+    // {
+    //     "namePet": "Kitoglavy",
+    //     "inform": "South America, to Central America",
+    //     "srcImg": "../../assets/images/pets/Kitoglavy.jpg",
+    //     "iconAnimalType": "pets__fish"
+    // },
     {
         "namePet": "Platypus",
         "inform": "N.S.W.",
@@ -55,7 +55,7 @@ let dataPetItems = [{ "namePet": "Eagles", "inform": "Native to South America", 
     },
     {
         "namePet": "Phycodurus eques",
-        "inform": "Southeast and southwest coast of Australia",
+        "inform": "Southeast and southwest",
         "srcImg": "../../assets/images/pets/eques.jpg",
         "iconAnimalType": "pets__fish"
     },
@@ -119,12 +119,12 @@ let dataPetItems = [{ "namePet": "Eagles", "inform": "Native to South America", 
         "srcImg": "../../assets/images/pets/Buffalo.jpg",
         "iconAnimalType": "pets__banana"
     },
-    // {
-    //     "namePet": "What kind of",
-    //     "inform": "North America",
-    //     "srcImg": "../../assets/images/pets/What.jpg",
-    //     "iconAnimalType": "url(../../../assets/incons/banana.svg)"
-    // },
+    {
+        "namePet": "What kind of",
+        "inform": "North America",
+        "srcImg": "../../assets/images/pets/What.jpg",
+        "iconAnimalType": "pets__banana"
+    },
     {
         "namePet": "Rhinopithecus",
         "inform": "Asia",

@@ -31,13 +31,13 @@ function handlerChangeWidthWindow() {
     if (640 >= windowWidth) {
         testimonialsCards.addEventListener('click', handlerClickTestimonialsBox)
     } else {
-        console.log(77777)
+
         testimonialsCards.removeEventListener('click', handlerClickTestimonialsBox)
     }
 }
 
 function handlerClickTestimonialsBox(e) {
-    console.log(11)
+
     let card = e.target.closest('.testimonials__card');
     if (!card) return
     card = createTestimonialsCardClone(card);

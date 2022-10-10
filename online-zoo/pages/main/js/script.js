@@ -24,7 +24,9 @@ prevBtn.addEventListener('click', handlerClickPrevBtnPets);
 
 let totalCountItems = Math.floor(visibleWidth / petItemWidth);
 let sumVisibleWidthPetItems = totalCountItems * petItemWidth;
-let gapItem = (visibleWidth - totalCountItems * petItemWidth) / (totalCountItems - 1)
+let gapItem = (overallWidth - ((petItemAll.length / 2) * petItemWidth)) / (petItemAll.length / 2 - 1);
+
+
 
 function handlerClickNextBtnPets() {
     arrPetsPrev.push(...arrPetsNext.splice(0, 6))
