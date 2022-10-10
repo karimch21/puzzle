@@ -28,6 +28,7 @@ function closeMenu(e) {
 }
 
 function switchClassBackground() {
+
     wrapperContent.classList.toggle('wrapper--active-bg')
 }
 
