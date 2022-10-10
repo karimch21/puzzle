@@ -532,6 +532,59 @@
 
 .testimonials__cards-wrap {
     overflow-x: hidden;
+    position: relative;
+}
+
+.testimonials__cards-wrap--active {
+    overflow-x: visible;
+}
+
+.testimonials__card.testimonials__card-popup {
+    max-width: 267px;
+    max-height: 391px;
+    height: 100%;
+    position: relative;
+    overflow: visible;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.testimonials__cards-wrap .testimonials__box-popup {
+    transition: opacity 0.9s;
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: z-index 0.5s;
+}
+
+.testimonials__cards-wrap--active .testimonials__box-popup {
+    z-index: 2;
+    transition: z-index 0.5s;
+}
+
+.testimonials__cards-wrap--active .testimonials__card-popup {
+    opacity: 2;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.testimonials__card-btn-close {
+    position: absolute;
+    right: -27px;
+    top: -15px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../../../assets/incons/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.testimonials__card-popup .testimonials__stories {
+    max-height: 309px;
 }
 
 .testimonials__card {
