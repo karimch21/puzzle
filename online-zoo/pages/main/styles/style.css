@@ -43,7 +43,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #fff;
-    z-index: 2;
+    z-index: 1;
 }
 
 .promo__title span {
@@ -561,14 +561,14 @@
 }
 
 .testimonials__cards-wrap--active .testimonials__box-popup {
-    z-index: 2;
+    z-index: 190;
     transition: z-index 0.5s;
 }
 
 .testimonials__cards-wrap--active .testimonials__card-popup {
     opacity: 2;
     transition: all 0.5s;
-    z-index: 2;
+    z-index: 190;
 }
 
 .testimonials__card-btn-close {

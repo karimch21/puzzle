@@ -86,9 +86,9 @@ function deleteTestimonialsCardsBoxPopup(testimonialsBoxPopup) {
 }
 
 function addActiveBgBody() {
-    document.querySelector('.wrapper').classList.add('wrapper--active-bg');
+    document.querySelector('.wrapper').classList.add('wrapper--active-bg-testimonials-card');
 }
 
 function removeActiveBgBody() {
-    document.querySelector('.wrapper').classList.remove('wrapper--active-bg');
+    document.querySelector('.wrapper').classList.remove('wrapper--active-bg-testimonials-card');
 }

@@ -6,7 +6,7 @@
     font-size: 16px;
     color: #FFFFFF;
     position: relative;
-    z-index: 5;
+    z-index: 200;
 }
 
 .header-wrap {
@@ -165,6 +165,10 @@
         transition: left 0.8s;
         height: 329px;
         overflow-y: auto;
+        z-index: 200;
+    }
+    .menu-wrap--active {
+        font-size: 16px;
     }
     .menu-wrap--active::after {
         content: '';
@@ -208,6 +212,7 @@
         left: 0;
         width: 100%;
         top: 0;
+        z-index: 200;
     }
     .header .logo-title a {
         width: 47px;
