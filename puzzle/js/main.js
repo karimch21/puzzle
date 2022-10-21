@@ -5,7 +5,7 @@ let matrix = [];
 let countItems;
 let modePuzzle;
 let blankTileNumber;
-let maxMixin = 50;
+let maxMixin = 10;
 let timer;
 let lockedCoordinates = null;
 
@@ -14,11 +14,18 @@ page.addEventListener('click', pageClickHandler);
 
 function initPuzzleGame() {
     let tiles = createTiles();
+    let btnsWrap = createWrapBtns();
     let btnMixin = createMixinBtn();
+    let btnRestart = createRestartBtn();
+
     appendCreatedElement(fifteen, tiles);
-    appendCreatedElement(page, btnMixin);
+    appendCreatedElement(btnsWrap, btnMixin);
+    appendCreatedElement(btnsWrap, btnRestart);
+    appendCreatedElement(page, btnsWrap);
+
     definitionTiles(tiles);
     setPosition(matrix)
+    mixinClickHandler(true)
 }
 
 function definitionTiles(tiles) {
@@ -49,7 +56,7 @@ function getMatrix(arrTiles) {
             x = 0;
         }
     }
-    console.log(matrix)
+
     return matrix;
 }
 
@@ -73,7 +80,21 @@ function createTiles(countTiles = 16) {
 }
 
 function hiddenLastTile(tilesItems) {
+
     tilesItems[tilesItems.length - 1].style.display = 'none';
+}
+
+function createWrapBtns() {
+    deleteWrapBtns()
+    let btnsWrap = document.createElement('div');
+    btnsWrap.classList.add('btns-wrap');
+    return btnsWrap
+}
+
+function deleteWrapBtns() {
+    let btnsWrap = document.querySelector('.btns-wrap');
+
+    if (btnsWrap) btnsWrap.remove();
 }
 
 function createMixinBtn() {
@@ -83,13 +104,20 @@ function createMixinBtn() {
     return btnMixin
 }
 
+function createRestartBtn() {
+    let btnRestart = document.createElement('button');
+    btnRestart.classList.add('restart');
+    btnRestart.textContent = 'Начать заново'
+    return btnRestart
+}
+
 function appendCreatedElement(place, elem) {
     if (!place) return
     place.appendChild(elem)
 }
 
 function setPosition(matrix) {
-    console.log(matrix)
+
     for (let y = 0; y < matrix.length; y++) {
         for (let x = 0; x < matrix[y].length; x++) {
             let value = matrix[y][x];
@@ -107,9 +135,11 @@ function setNodeStyles(node, x, y) {
 function pageClickHandler(e) {
     let btnMixin = e.target.closest('.mixin');
     let tile = e.target.closest('.tile');
+    let restartBtn = e.target.closest('.restart');
 
     mixinClickHandler(btnMixin)
     tileClickHandler(tile)
+    restartClickHandler(restartBtn)
 }
 
 function mixinClickHandler(btnMixin) {
@@ -129,6 +159,25 @@ function mixinClickHandler(btnMixin) {
             }
         }, 70);
     }
+}
+
+function restartClickHandler(restartBtn) {
+
+    if (!restartBtn) return
+
+
+    fifteen = document.querySelector('.fifteen');
+    page = document.querySelector('.page')
+    fifteen.innerHTML = ''
+    tilesItems = null
+    matrix = [];
+    countItems = 0
+    modePuzzle = 0
+    blankTileNumber = 0
+
+    timer = null
+    lockedCoordinates = null;
+    initPuzzleGame()
 }
 
 function randomSwap(matrix) {
@@ -151,7 +200,7 @@ function findValideCoords(matrix, blankTileCoords, lockedCoordinates) {
             }
         }
     }
-    console.log(valideCoords)
+
     return valideCoords
 }
 
