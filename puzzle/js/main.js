@@ -9,6 +9,7 @@ let blankTileNumber;
 let maxMixin = 10;
 let timer;
 let lockedCoordinates = null;
+let moveCount = 0;
 
 window.addEventListener('load', initPuzzleGame);
 page.addEventListener('click', pageClickHandler);
@@ -122,6 +123,13 @@ function deleteInformationTable() {
     if (wrapInformTable) wrapInformTable.remove()
 }
 
+function resetInformTable() {
+    moveCount = 0;
+    let informationTable = createInformationTable();
+    appendCreatedElement(page, informationTable)
+    fifteenClickHandler()
+}
+
 function createWrapBtns() {
     deleteWrapBtns()
     let btnsWrap = document.createElement('div');
@@ -197,6 +205,7 @@ function mixinClickHandler(btnMixin) {
     clearInterval(timer)
     randomSwap(matrix)
     setPosition(matrix)
+    resetInformTable()
     if (mixinCount === 0) {
         timer = setInterval(() => {
             randomSwap(matrix)
@@ -209,6 +218,7 @@ function mixinClickHandler(btnMixin) {
         }, 70);
     }
 }
+
 
 function restartClickHandler(restartBtn) {
 
@@ -268,6 +278,7 @@ function tileClickHandler(tile) {
 
     if (!valide) return
     swap(tileCoords, blankTileCoords, matrix)
+    moveTiles()
 }
 
 function findCoordinatesByNumber(number, matrix) {
@@ -311,4 +322,11 @@ function startTime() {
         time.textContent = `${minute.toString().length === 1 ? '0' + minute : minute}:${('0' + second).slice(-2)}`
         setTimeout(t, 1000)
     }, 0)
+}
+
+function moveTiles() {
+    moveCount++;
+    let blockMove = document.querySelector('.move-count');
+    if (!blockMove) return;
+    blockMove.textContent = moveCount
 }
