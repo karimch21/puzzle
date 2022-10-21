@@ -1,5 +1,6 @@
 let fifteen = document.querySelector('.fifteen');
-let page = document.querySelector('.page')
+let page = document.querySelector('.page');
+let tiles;
 let tilesItems;
 let matrix = [];
 let countItems;
@@ -9,7 +10,7 @@ let maxMixin = 10;
 let timer;
 let lockedCoordinates = null;
 
-window.addEventListener('load', initPuzzleGame)
+window.addEventListener('load', initPuzzleGame);
 page.addEventListener('click', pageClickHandler);
 
 function initPuzzleGame() {
@@ -17,12 +18,15 @@ function initPuzzleGame() {
     let btnsWrap = createWrapBtns();
     let btnMixin = createMixinBtn();
     let btnRestart = createRestartBtn();
+    let informationTable = createInformationTable();
 
     appendCreatedElement(fifteen, tiles);
     appendCreatedElement(btnsWrap, btnMixin);
     appendCreatedElement(btnsWrap, btnRestart);
+    appendCreatedElement(page, informationTable)
     appendCreatedElement(page, btnsWrap);
 
+    fifteenClickHandler()
     definitionTiles(tiles);
     setPosition(matrix)
     mixinClickHandler(true)
@@ -84,6 +88,40 @@ function hiddenLastTile(tilesItems) {
     tilesItems[tilesItems.length - 1].style.display = 'none';
 }
 
+function createInformationTable() {
+    deleteInformationTable()
+    let wrapInformTable = document.createElement('div');
+    let timeWrap = document.createElement('div');
+    let timeText = document.createElement('span');
+    let time = document.createElement('div');
+    let moveWrap = document.createElement('div');
+    let moveText = document.createElement('span');
+    let move = document.createElement('div');
+
+    wrapInformTable.classList.add('inform-table');
+    move.classList.add('move-count');
+    time.classList.add('time');
+
+    timeText.textContent = 'Время: '
+    time.textContent = '00:00';
+    moveText.textContent = 'Количесто ходов: '
+    move.textContent = 0;
+
+    moveWrap.appendChild(moveText);
+    moveWrap.appendChild(move)
+    timeWrap.appendChild(timeText)
+    timeWrap.appendChild(time)
+    wrapInformTable.appendChild(timeWrap);
+    wrapInformTable.appendChild(moveWrap);
+
+    return wrapInformTable;
+}
+
+function deleteInformationTable() {
+    let wrapInformTable = document.querySelector('.inform-table');
+    if (wrapInformTable) wrapInformTable.remove()
+}
+
 function createWrapBtns() {
     deleteWrapBtns()
     let btnsWrap = document.createElement('div');
@@ -140,6 +178,17 @@ function pageClickHandler(e) {
     mixinClickHandler(btnMixin)
     tileClickHandler(tile)
     restartClickHandler(restartBtn)
+}
+
+function fifteenClickHandler() {
+    fifteen = document.querySelector('.fifteen');
+    if (!fifteen) return;
+
+    fifteen.addEventListener('click', () => {
+        startTime()
+        console.log(fifteen);
+    }, { once: true })
+
 }
 
 function mixinClickHandler(btnMixin) {
@@ -244,4 +293,22 @@ function swap(tileCoords, blankTileCoords, matrix) {
     matrix[tileCoords.y][tileCoords.x] = coords2;
     matrix[blankTileCoords.y][blankTileCoords.x] = coords1;
     setPosition(matrix)
+}
+
+function startTime() {
+    let time = document.querySelector('.time');
+    if (!time) return
+    let second = 0;
+    let minute = 0;
+
+    let timer = setTimeout(function t() {
+        second++;
+
+        if (second == 60) {
+            minute += 1;
+            second = 0;
+        }
+        time.textContent = `${minute.toString().length === 1 ? '0' + minute : minute}:${('0' + second).slice(-2)}`
+        setTimeout(t, 1000)
+    }, 0)
 }
