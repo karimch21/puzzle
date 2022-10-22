@@ -10,6 +10,9 @@ let maxMixin = 10;
 let timer;
 let lockedCoordinates = null;
 let moveCount = 0;
+let second = 0;
+let minute = 0;
+
 
 window.addEventListener('load', initPuzzleGame);
 page.addEventListener('click', pageClickHandler);
@@ -19,18 +22,28 @@ function initPuzzleGame() {
     let btnsWrap = createWrapBtns();
     let btnMixin = createMixinBtn();
     let btnRestart = createRestartBtn();
+    let btnSave = createSaveBtn();
+    let btnDelteSave = createDelteSaveBtn();
     let informationTable = createInformationTable();
 
     appendCreatedElement(fifteen, tiles);
     appendCreatedElement(btnsWrap, btnMixin);
+    appendCreatedElement(btnsWrap, btnSave)
     appendCreatedElement(btnsWrap, btnRestart);
-    appendCreatedElement(page, informationTable)
+    appendCreatedElement(btnsWrap, btnDelteSave);
+
+
     appendCreatedElement(page, btnsWrap);
+    appendCreatedElement(page, informationTable)
 
     fifteenClickHandler()
     definitionTiles(tiles);
     setPosition(matrix)
-    mixinClickHandler(true)
+
+    if (!checkDataGameLocalStorage('dataGame')) {
+        mixinClickHandler(true)
+    }
+
 }
 
 function definitionTiles(tiles) {
@@ -135,6 +148,20 @@ function createWrapBtns() {
     let btnsWrap = document.createElement('div');
     btnsWrap.classList.add('btns-wrap');
     return btnsWrap
+}
+
+function createSaveBtn() {
+    let saveBtn = document.createElement('button');
+    saveBtn.classList.add('save-btn');
+    saveBtn.textContent = 'Сохранить игру'
+    return saveBtn
+}
+
+function createDelteSaveBtn() {
+    let delteSaveBtn = document.createElement('button');
+    delteSaveBtn.classList.add('delte-save');
+    delteSaveBtn.textContent = 'Удалить сохранение игры'
+    return delteSaveBtn
 }
 
 function deleteWrapBtns() {
@@ -309,8 +336,7 @@ function swap(tileCoords, blankTileCoords, matrix) {
 function startTime() {
     let time = document.querySelector('.time');
     if (!time) return
-    let second = 0;
-    let minute = 0;
+
 
     let timer = setTimeout(function t() {
         second++;
@@ -329,4 +355,9 @@ function moveTiles() {
     let blockMove = document.querySelector('.move-count');
     if (!blockMove) return;
     blockMove.textContent = moveCount
+}
+
+function checkDataGameLocalStorage(data) {
+    let dataGame = localStorage.getItem('dataGame');
+    return dataGame
 }
