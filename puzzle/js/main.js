@@ -12,6 +12,8 @@ let lockedCoordinates = null;
 let moveCount = 0;
 let second = 0;
 let minute = 0;
+let valideMove;
+
 
 
 window.addEventListener('load', initPuzzleGame);
@@ -24,6 +26,7 @@ function initPuzzleGame() {
     let btnRestart = createRestartBtn();
     let btnSave = createSaveBtn();
     let btnDelteSave = createDelteSaveBtn();
+    let btnSoundMoveTile = createBtnSoundMoveTile()
     let informationTable = createInformationTable();
 
     appendCreatedElement(fifteen, tiles);
@@ -31,6 +34,7 @@ function initPuzzleGame() {
     appendCreatedElement(btnsWrap, btnSave)
     appendCreatedElement(btnsWrap, btnRestart);
     appendCreatedElement(btnsWrap, btnDelteSave);
+    appendCreatedElement(btnsWrap, btnSoundMoveTile)
 
 
     appendCreatedElement(page, btnsWrap);
@@ -164,6 +168,12 @@ function createDelteSaveBtn() {
     return delteSaveBtn
 }
 
+function createBtnSoundMoveTile() {
+    let btnSound = document.createElement('button');
+    btnSound.classList.add('btn-sound');
+    return btnSound;
+}
+
 function deleteWrapBtns() {
     let btnsWrap = document.querySelector('.btns-wrap');
 
@@ -246,7 +256,6 @@ function mixinClickHandler(btnMixin) {
     }
 }
 
-
 function restartClickHandler(restartBtn) {
 
     if (!restartBtn) return
@@ -302,8 +311,10 @@ function tileClickHandler(tile) {
     let tileCoords = findCoordinatesByNumber(tileNumber, matrix);
     let blankTileCoords = findCoordinatesByNumber(blankTileNumber, matrix);
     let valide = isValide(tileCoords, blankTileCoords);
+    valideMove = valide;
 
     if (!valide) return
+
     swap(tileCoords, blankTileCoords, matrix)
     moveTiles()
 }
