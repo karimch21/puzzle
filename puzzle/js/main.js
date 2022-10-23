@@ -4,7 +4,7 @@ let tiles;
 let tilesItems;
 let matrix = [];
 let countItems;
-let modePuzzle;
+let modePuzzle = 4;
 let blankTileNumber;
 let maxMixin = 10;
 let timer;
@@ -20,7 +20,8 @@ window.addEventListener('load', initPuzzleGame);
 page.addEventListener('click', pageClickHandler);
 
 function initPuzzleGame() {
-    let tiles = createTiles();
+    let tiles = createTiles(modePuzzle * modePuzzle);
+    console.log(tiles)
     let btnsWrap = createWrapBtns();
     let btnMixin = createMixinBtn();
     let btnRestart = createRestartBtn();
@@ -28,6 +29,7 @@ function initPuzzleGame() {
     let btnDelteSave = createDelteSaveBtn();
     let btnSoundMoveTile = createBtnSoundMoveTile()
     let informationTable = createInformationTable();
+    let modeSelectionPuzzle = createModeSelectionPuzzle();
 
     appendCreatedElement(fifteen, tiles);
     appendCreatedElement(btnsWrap, btnMixin);
@@ -35,6 +37,7 @@ function initPuzzleGame() {
     appendCreatedElement(btnsWrap, btnRestart);
     appendCreatedElement(btnsWrap, btnDelteSave);
     appendCreatedElement(btnsWrap, btnSoundMoveTile)
+    appendCreatedElement(btnsWrap, modeSelectionPuzzle)
 
 
     appendCreatedElement(page, btnsWrap);
@@ -54,7 +57,8 @@ function definitionTiles(tiles) {
     if (!tiles) return
     tilesItems = Array.from(document.querySelectorAll('.tile'))
     countItems = tilesItems.length
-    modePuzzle = 4;
+    console.log(tilesItems)
+        // modePuzzle = 4;
     matrix = getMatrix(tilesItems.map(tile => tile.dataset.matrixId))
     hiddenLastTile(tilesItems)
     blankTileNumber = tilesItems.length;
@@ -67,7 +71,7 @@ function getMatrix(arrTiles) {
     for (let i = 0; i < modePuzzle; i++) {
         matrix.push([])
     }
-
+    console.log(arrTiles)
     for (let i = 0; i < arrTiles.length; i++) {
         if (x < modePuzzle) {
             matrix[y].push(+arrTiles[i]);
@@ -219,10 +223,36 @@ function pageClickHandler(e) {
     let btnMixin = e.target.closest('.mixin');
     let tile = e.target.closest('.tile');
     let restartBtn = e.target.closest('.restart');
+    let btnMode = e.target.closest('.btn-mode');
 
+    btnModeClickHandler(btnMode)
     mixinClickHandler(btnMixin)
     tileClickHandler(tile)
     restartClickHandler(restartBtn)
+}
+
+function btnModeClickHandler(btnMode) {
+    if (!btnMode) return
+    resetVariables()
+    modePuzzle = +btnMode.dataset.mode;
+    console.log(modePuzzle)
+    initPuzzleGame()
+}
+
+function resetVariables() {
+    fifteen.innerHTML = '';
+    tiles = null
+    tilesItems = null;
+    matrix = [];
+    countItems = null;
+    blankTileNumber = null;
+    timer = null;
+    lockedCoordinates = null;
+    moveCount = 0;
+    second = 0;
+    minute = 0;
+    valideMove = null;
+
 }
 
 function fifteenClickHandler() {
@@ -259,18 +289,14 @@ function mixinClickHandler(btnMixin) {
 function restartClickHandler(restartBtn) {
 
     if (!restartBtn) return
-
-
     fifteen = document.querySelector('.fifteen');
     page = document.querySelector('.page')
     fifteen.innerHTML = ''
     tilesItems = null
     matrix = [];
     countItems = 0
-    modePuzzle = 0
+    modePuzzle = 4
     blankTileNumber = 0
-
-    timer = null
     lockedCoordinates = null;
     initPuzzleGame()
 }
