@@ -10,9 +10,10 @@ let maxMixin = 10;
 let timer;
 let lockedCoordinates = null;
 let moveCount = 0;
-let second = 0;
-let minute = 0;
+let second
+let minute
 let valideMove;
+let timerGame;
 
 
 
@@ -43,7 +44,7 @@ function initPuzzleGame() {
     appendCreatedElement(page, btnsWrap);
     appendCreatedElement(page, informationTable)
 
-    fifteenClickHandler()
+    // fifteenClickHandler()
     definitionTiles(tiles);
     setPosition(matrix)
 
@@ -148,7 +149,8 @@ function resetInformTable() {
     moveCount = 0;
     let informationTable = createInformationTable();
     appendCreatedElement(page, informationTable)
-    fifteenClickHandler()
+        // fifteenClickHandler()
+    zeroingGameTime()
 }
 
 function createWrapBtns() {
@@ -224,12 +226,16 @@ function pageClickHandler(e) {
     let tile = e.target.closest('.tile');
     let restartBtn = e.target.closest('.restart');
     let btnMode = e.target.closest('.btn-mode');
+    let fifteenEl = e.target.closest('.fifteen');
 
+    fifteenClickHandler()
     btnModeClickHandler(btnMode)
     mixinClickHandler(btnMixin)
     tileClickHandler(tile)
     restartClickHandler(restartBtn)
+    addClassActiveFifteen(fifteenEl)
 }
+
 
 function btnModeClickHandler(btnMode) {
     if (!btnMode) return
@@ -255,15 +261,24 @@ function resetVariables() {
 
 }
 
+function addClassActiveFifteen(fifteenEl) {
+    if (!fifteenEl) return
+    fifteenEl.classList.add('fifteen--active');
+}
+
+function removeClassActiveFifteen() {
+    let fifteen = document.querySelector('.fifteen');
+    if (!fifteen) return;
+    fifteen.classList.remove('fifteen--active')
+}
+
 function fifteenClickHandler() {
     fifteen = document.querySelector('.fifteen');
     if (!fifteen) return;
 
-    fifteen.addEventListener('click', () => {
+    if (!fifteen.classList.contains('fifteen--active')) {
         startTime()
-        console.log(fifteen);
-    }, { once: true })
-
+    }
 }
 
 function mixinClickHandler(btnMixin) {
@@ -273,6 +288,8 @@ function mixinClickHandler(btnMixin) {
     randomSwap(matrix)
     setPosition(matrix)
     resetInformTable()
+    removeClassActiveFifteen()
+    zeroingGameTime()
     if (mixinCount === 0) {
         timer = setInterval(() => {
             randomSwap(matrix)
@@ -299,6 +316,8 @@ function restartClickHandler(restartBtn) {
     blankTileNumber = 0
     lockedCoordinates = null;
     initPuzzleGame()
+    zeroingGameTime()
+    removeClassActiveFifteen();
 }
 
 function randomSwap(matrix) {
@@ -370,21 +389,36 @@ function swap(tileCoords, blankTileCoords, matrix) {
     setPosition(matrix)
 }
 
+
 function startTime() {
     let time = document.querySelector('.time');
-    if (!time) return
+    if (!time && !fifteen) return
 
 
-    let timer = setTimeout(function t() {
+    console.log('TIME')
+
+    timerGame = setTimeout(function t() {
         second++;
 
         if (second == 60) {
             minute += 1;
             second = 0;
         }
+        console.log(second)
         time.textContent = `${minute.toString().length === 1 ? '0' + minute : minute}:${('0' + second).slice(-2)}`
+        if (!fifteen.classList.contains('fifteen--active')) {
+            zeroingGameTime()
+            return
+        }
         setTimeout(t, 1000)
-    }, 0)
+    }, 1000)
+
+
+}
+
+function zeroingGameTime() {
+    second = 0;
+    minute = 0;
 }
 
 function moveTiles() {
