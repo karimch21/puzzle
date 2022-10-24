@@ -39,7 +39,7 @@
 
     function btnSaveHandler(btnSave) {
         if (!btnSave) return
-        console.log(678)
+
         let time = document.querySelector('.time');
         let move = document.querySelector('.move-count');
         if (!time && !move) return
@@ -52,7 +52,7 @@
         }
         let jsonDataGame = dataTtranformStringify(dataGame);
         saveDataInLocalStorage(jsonDataGame, gameInformation);
-        console.log(34567890)
+
     }
 
     function dataTtranformStringify(data) {
@@ -60,13 +60,13 @@
     }
 
     function dataTransformParse(data) {
-        console.log(data)
+
         if (!data) return
         if (typeof data === 'string') return JSON.parse(data);
     }
 
     function saveDataInLocalStorage(data, nameData) {
-        console.log(777)
+
         localStorage.setItem(nameData, data);
     }
 

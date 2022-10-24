@@ -5,7 +5,7 @@
     })
 
     function clickWindowHandledr(e) {
-        console.log('MOse')
+
         let tile = e.target.closest('.tile');
         let btnMixin = e.target.closest('.mixin');
         let btnRestartGame = e.target.closest('.restart');
@@ -90,9 +90,11 @@
 
     function closeMessageWin(btnMixin, btnRestartGame, btnMode) {
         if (btnMixin || btnRestartGame || btnMode) {
-            console.log(btnMixin || btnRestartGame || btnMode)
+
             deleteWinInfo()
             removeClassDisabledFifteen()
         }
     }
 })()
+
+console.log("1.layout, design, responsive UI: +10\n\n2.at the beginning state of the game, the frame is filled with randomly generated and shuffled numbers: +10\n\n3.on click on a tile next to an empty cell, the tile moves to the empty cell: +10\n\n4.the game can be restarted without reloading the page: +10\n\n5.game duration and number of moves are displayed: +10\n\n6.sound accompaniment (on/off) of tiles movement: +10\n\n7.implemented saving the state of the game and saving the top 10 results using LocalStorage: +5\n\n8.implemented selection of different sizes for frame: +10\n\n9.when the game is finished, the following message is displayed \"Hooray! You solved the puzzle in ##:## and N moves!\". So that shuffled algorithm should work correctly - user can solve puzzle +10\n\n10.animation of tiles' movement on frame: +15\n\nTotal points:100")

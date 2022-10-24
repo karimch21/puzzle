@@ -20,7 +20,7 @@ page.addEventListener('click', pageClickHandler);
 
 function initPuzzleGame() {
     let tiles = createTiles(modePuzzle * modePuzzle);
-    console.log(tiles)
+
     let btnsWrap = createWrapBtns();
     let btnMixin = createMixinBtn();
     let btnRestart = createRestartBtn();
@@ -54,8 +54,6 @@ function definitionTiles(tiles) {
     if (!tiles) return
     tilesItems = Array.from(document.querySelectorAll('.tile'))
     countItems = tilesItems.length
-    console.log(tilesItems)
-        // modePuzzle = 4;
     matrix = getMatrix(tilesItems.map(tile => tile.dataset.matrixId))
     hiddenLastTile(tilesItems)
     blankTileNumber = tilesItems.length;
@@ -68,7 +66,7 @@ function getMatrix(arrTiles) {
     for (let i = 0; i < modePuzzle; i++) {
         matrix.push([])
     }
-    console.log(arrTiles)
+
     for (let i = 0; i < arrTiles.length; i++) {
         if (x < modePuzzle) {
             matrix[y].push(+arrTiles[i]);
@@ -396,7 +394,7 @@ function startTime() {
     if (!time && !fifteen) return
 
 
-    console.log('TIME')
+
 
     timerGame = setTimeout(function t() {
         second++;
@@ -405,7 +403,7 @@ function startTime() {
             minute += 1;
             second = 0;
         }
-        console.log(second)
+
         time.textContent = `${minute.toString().length === 1 ? '0' + minute : minute}:${('0' + second).slice(-2)}`
         if (!fifteen.classList.contains('fifteen--active')) {
             zeroingGameTime()

@@ -35,7 +35,7 @@
         if (!tile) return
 
         if (valideMove) {
-            console.log(234)
+
             audioMoveTile.play()
             audioMoveTile.playbackRate = 3
         }
