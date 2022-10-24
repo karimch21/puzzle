@@ -2,10 +2,13 @@ body,
 html {
     font: 16px/1.4 serif;
     position: relative;
+    overflow-x: hidden;
 }
 
 body {
-    overflow-x: hidden;
+    max-width: 1660px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .page {
@@ -167,21 +170,26 @@ button {
 }
 
 .message {
-    max-width: 400px;
+    max-width: 430px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.932);
     color: #fff;
-    padding: 15px 10px;
-    border-radius: 10px;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(200%, -50%);
+    transform: translate(1000%, -50%);
     transition: transform 0.8s;
+}
+
+.message__content {
+    border-radius: 10px;
+    margin: 0 5px;
+    padding: 15px 10px;
+    background-color: rgba(0, 0, 0, 0.932);
 }
 
 .game-win .message-win--active {
     transform: translate(-50%, -50%);
+    transition: transform 0.8s;
 }
 
 .message__title {
