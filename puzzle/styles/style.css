@@ -71,3 +71,83 @@ h1 {
 .audio-move-tile {
     display: none;
 }
+
+.fifteen[data-mode-num="3"] .item {
+    width: 33%;
+    height: 33%;
+}
+
+.fifteen[data-mode-num="5"] .item {
+    width: 20%;
+    height: 20%;
+    font-size: 1.5rem;
+}
+
+.page[data-mode-num="6"] {
+    max-width: 500px;
+}
+
+.page[data-mode-num="6"] .item {
+    width: 16.7%;
+    height: 16.7%;
+    font-size: 1.5rem;
+}
+
+.page[data-mode-num="7"] .item {
+    width: 14.3%;
+    height: 14.3%;
+    font-size: 1.2rem;
+}
+
+.page[data-mode-num="8"] .item {
+    width: 12.5%;
+    height: 12.5%;
+    font-size: 1rem;
+}
+
+.btns-wrap button {
+    padding: 5px 0 5px;
+    display: block;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btns-wrap .btn-sound {
+    max-width: 60px;
+    width: 100%;
+    padding: 12px 0 12px;
+    border: 1px solid;
+    background-color: rgba(223, 223, 223, 0.151);
+    position: relative;
+}
+
+.btn-sound::after {
+    content: 'audio';
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    font-size: 19px;
+    transform: translateY(-50%);
+}
+
+.btns-wrap button:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.wrap-mode {
+    margin: 15px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-mode {
+    cursor: pointer;
+}
+
+.btn-mode:not(:last-child) {
+    margin-right: 10px;
+}

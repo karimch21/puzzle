@@ -43,8 +43,8 @@ function initPuzzleGame() {
 
     appendCreatedElement(page, btnsWrap);
     appendCreatedElement(page, informationTable)
-
-    // fifteenClickHandler()
+    addModePageAnnFifteen(modePuzzle)
+        // fifteenClickHandler()
     definitionTiles(tiles);
     setPosition(matrix)
 
@@ -241,8 +241,14 @@ function btnModeClickHandler(btnMode) {
     if (!btnMode) return
     resetVariables()
     modePuzzle = +btnMode.dataset.mode;
-    console.log(modePuzzle)
     initPuzzleGame()
+    addModePageAnnFifteen(modePuzzle)
+}
+
+function addModePageAnnFifteen(modePuzzle) {
+    if (!fifteen && !page) return
+    fifteen.dataset.modeNum = modePuzzle;
+    page.dataset.modeNum = modePuzzle;
 }
 
 function resetVariables() {
