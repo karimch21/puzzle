@@ -151,3 +151,12 @@ button {
 .btn-mode:not(:last-child) {
     margin-right: 10px;
 }
+
+.inform-table {
+    display: flex;
+    align-items: center;
+}
+
+.inform-table div:first-child {
+    margin-right: auto;
+}
