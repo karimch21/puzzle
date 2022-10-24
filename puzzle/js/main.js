@@ -15,8 +15,6 @@ let minute
 let valideMove;
 let timerGame;
 
-
-
 window.addEventListener('load', initPuzzleGame);
 page.addEventListener('click', pageClickHandler);
 
@@ -44,14 +42,12 @@ function initPuzzleGame() {
     appendCreatedElement(page, btnsWrap);
     appendCreatedElement(page, informationTable)
     addModePageAnnFifteen(modePuzzle)
-        // fifteenClickHandler()
     definitionTiles(tiles);
     setPosition(matrix)
 
     if (!checkDataGameLocalStorage('dataGame')) {
         mixinClickHandler(true)
     }
-
 }
 
 function definitionTiles(tiles) {
@@ -394,7 +390,6 @@ function swap(tileCoords, blankTileCoords, matrix) {
     matrix[blankTileCoords.y][blankTileCoords.x] = coords1;
     setPosition(matrix)
 }
-
 
 function startTime() {
     let time = document.querySelector('.time');
