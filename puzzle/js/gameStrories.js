@@ -15,6 +15,10 @@
         let stringDataGame = getDataInLocalStorage(gameInformation)
         let parsedDataGame = dataTransformParse(stringDataGame)
         if (!parsedDataGame) return
+        resetVariables()
+
+        modePuzzle = parsedDataGame.modePuzzle;
+        initPuzzleGame()
         matrix = parsedDataGame.matrix
         setPosition(parsedDataGame.matrix)
         updateInformTable(parsedDataGame)
