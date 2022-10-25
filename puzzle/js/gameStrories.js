@@ -111,10 +111,9 @@
     }
 
     function appendMesageSave(messageSave) {
-
-        // deleteMesageSave()
+        deleteMesageSave()
         if (!messageSave) return
-        console.log(messageSave)
+
         document.body.appendChild(messageSave);
     }
 

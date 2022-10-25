@@ -31,8 +31,15 @@
     }
 
     function appendMessageWin() {
+        removeMessageWin()
         let message = createWinMessage();
         document.body.appendChild(message)
+    }
+
+    function removeMessageWin() {
+        let message = document.querySelector('.message-win');
+        if (!message) return
+        message.remove()
     }
 
     function stopGameTimer() {
@@ -75,7 +82,7 @@
         let message = document.querySelector('.message-win--active');
         if (!message) return
         document.body.classList.remove('game-win');
-        message.classList.remove('message-win');
+        message.classList.remove('message-win--active');
     }
 
     function addClassDisabledFifteen() {
@@ -89,11 +96,7 @@
     }
 
     function closeMessageWin(btnMixin, btnRestartGame, btnMode) {
-        let messageWin = document.querySelector('.message-win');
-        if (!messageWin) {
-            appendMessageWin()
-            return
-        }
+
 
         if (btnMixin || btnRestartGame || btnMode) {
             deleteWinInfo()

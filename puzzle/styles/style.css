@@ -193,8 +193,12 @@ button {
     transition: transform 0.8s;
 }
 
+.message-win {
+    z-index: 5;
+}
+
 .message-save {
-    z-index: 2;
+    z-index: 10;
 }
 
 .message-save--active {
