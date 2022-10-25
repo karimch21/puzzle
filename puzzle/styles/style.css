@@ -175,7 +175,7 @@ button {
     color: #fff;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(1000%, -50%);
     transition: transform 0.8s;
 }
@@ -188,6 +188,15 @@ button {
 }
 
 .game-win .message-win--active {
+    transform: translate(-50%, -50%);
+    transition: transform 0.8s;
+}
+
+.message-save {
+    z-index: 2;
+}
+
+.message-save--active {
     transform: translate(-50%, -50%);
     transition: transform 0.8s;
 }
@@ -213,4 +222,8 @@ button {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+button.restart {
+    display: none;
 }

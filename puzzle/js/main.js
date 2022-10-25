@@ -183,7 +183,7 @@ function deleteWrapBtns() {
 function createMixinBtn() {
     let btnMixin = document.createElement('button');
     btnMixin.classList.add('mixin');
-    btnMixin.textContent = 'Пермешать'
+    btnMixin.textContent = 'Пермешать и начать заново'
     return btnMixin
 }
 
@@ -222,7 +222,7 @@ function pageClickHandler(e) {
     let btnMode = e.target.closest('.btn-mode');
     let fifteenEl = e.target.closest('.fifteen');
 
-    fifteenClickHandler()
+    fifteenClickHandler(fifteenEl)
     btnModeClickHandler(btnMode)
     mixinClickHandler(btnMixin)
     tileClickHandler(tile)
@@ -272,9 +272,10 @@ function removeClassActiveFifteen() {
     fifteen.classList.remove('fifteen--active')
 }
 
-function fifteenClickHandler() {
+function fifteenClickHandler(fifteenEl) {
     fifteen = document.querySelector('.fifteen');
     if (!fifteen) return;
+    if (!fifteenEl) return
 
     if (!fifteen.classList.contains('fifteen--active')) {
         startTime()
@@ -392,9 +393,6 @@ function swap(tileCoords, blankTileCoords, matrix) {
 function startTime() {
     let time = document.querySelector('.time');
     if (!time && !fifteen) return
-
-
-
 
     timerGame = setTimeout(function t() {
         second++;
