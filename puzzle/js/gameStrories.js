@@ -7,11 +7,15 @@
     function windowClickHandler(e) {
         let btnSave = e.target.closest('.save-btn');
         let btnDeleteSave = e.target.closest('.delte-save')
+        let btnMode = e.target.closest('.btn-mode');
         btnSaveHandler(btnSave)
         delteDataGame(btnDeleteSave, gameInformation)
+        changeModeFifteen(btnMode);
     }
 
     function loadingSavedData() {
+        let messageSave = createMessageSave();
+        appendMesageSave(messageSave)
         let stringDataGame = getDataInLocalStorage(gameInformation)
         let parsedDataGame = dataTransformParse(stringDataGame)
         if (!parsedDataGame) return
@@ -22,8 +26,7 @@
         matrix = parsedDataGame.matrix
         setPosition(parsedDataGame.matrix)
         updateInformTable(parsedDataGame)
-        let messageSave = createMessageSave();
-        appendMesageSave(messageSave)
+
     }
 
     function updateInformTable(data) {
@@ -101,9 +104,24 @@
         return messageWrap
     }
 
+    function changeModeFifteen(btnMode) {
+        if (!btnMode) return
+        let messageSave = createMessageSave();
+        appendMesageSave(messageSave)
+    }
+
     function appendMesageSave(messageSave) {
+
+        // deleteMesageSave()
         if (!messageSave) return
+        console.log(messageSave)
         document.body.appendChild(messageSave);
+    }
+
+    function deleteMesageSave() {
+        let messageSave = document.querySelector('.message-save');
+        if (!messageSave) return
+        messageSave.remove();
     }
 
     function addingInfroSaveMessage() {

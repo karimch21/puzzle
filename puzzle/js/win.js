@@ -89,8 +89,13 @@
     }
 
     function closeMessageWin(btnMixin, btnRestartGame, btnMode) {
-        if (btnMixin || btnRestartGame || btnMode) {
+        let messageWin = document.querySelector('.message-win');
+        if (!messageWin) {
+            appendMessageWin()
+            return
+        }
 
+        if (btnMixin || btnRestartGame || btnMode) {
             deleteWinInfo()
             removeClassDisabledFifteen()
         }

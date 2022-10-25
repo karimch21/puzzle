@@ -16,11 +16,10 @@ let valideMove;
 let timerGame;
 
 window.addEventListener('load', initPuzzleGame);
-page.addEventListener('click', pageClickHandler);
 
 function initPuzzleGame() {
+    let pageElem = createFifteenForPage()
     let tiles = createTiles(modePuzzle * modePuzzle);
-
     let btnsWrap = createWrapBtns();
     let btnMixin = createMixinBtn();
     let btnRestart = createRestartBtn();
@@ -30,6 +29,10 @@ function initPuzzleGame() {
     let informationTable = createInformationTable();
     let modeSelectionPuzzle = createModeSelectionPuzzle();
 
+    appendCreatedElement(document.body, pageElem);
+    fifteen = document.querySelector('.fifteen');
+    page = document.querySelector('.page');
+    page.addEventListener('click', pageClickHandler);
     appendCreatedElement(fifteen, tiles);
     appendCreatedElement(btnsWrap, btnMixin);
     appendCreatedElement(btnsWrap, btnSave)
@@ -80,6 +83,28 @@ function getMatrix(arrTiles) {
 
     return matrix;
 }
+
+function createFifteenForPage() {
+    deleteFifteenForPage()
+    let page = document.createElement('div');
+    let fifteen = document.createElement('div');
+
+    page.classList.add('page');
+    fifteen.classList.add('fifteen');
+
+    page.appendChild(fifteen);
+    return page;
+}
+
+function deleteFifteenForPage() {
+    let fifteen = document.querySelector('.fifteen');
+    let page = document.querySelector('.page');
+    if (!fifteen && !page) return
+    fifteen.remove()
+    page.remove()
+}
+
+
 
 function createTiles(countTiles = 16) {
     let tilesFragment = document.createDocumentFragment();

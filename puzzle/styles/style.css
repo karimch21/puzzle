@@ -133,12 +133,13 @@ button {
 }
 
 .btn-sound::after {
-    content: 'audio';
+    content: 'звук';
     position: absolute;
-    right: -55px;
+    right: -40px;
     top: 50%;
     font-size: 19px;
     transform: translateY(-50%);
+    font: 16px/1.4 serif;
 }
 
 .btns-wrap button:not(:last-child) {
